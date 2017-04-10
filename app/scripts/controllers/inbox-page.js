@@ -18,7 +18,7 @@ angular.module('consultApp')
 			editor = new $.fn.dataTable.Editor({
 				// ajax: "../php/staff.php",
 				table: "#example",
-				idSrc:  'Name',
+				idSrc: 'Name',
 				fields: [{
 					label: "Name:",
 					name: "Name"
@@ -29,8 +29,8 @@ angular.module('consultApp')
 					label: "Office:",
 					name: "office"
 				}, {
-					label: "Extension:",
-					name: "extn"
+					label: "Age:",
+					name: "age"
 				}, {
 					label: "Start date:",
 					name: "start_date",
@@ -51,7 +51,7 @@ angular.module('consultApp')
 				}, {
 					data: "office"
 				}, {
-					data: "extn"
+					data: "age"
 				}, {
 					data: "start_date"
 				}, {
@@ -68,7 +68,13 @@ angular.module('consultApp')
 				}, {
 					extend: "remove",
 					editor: editor
-				}]
+				}],
+				fnRowCallback: function(nRow, aData, iDisplayIndex) {
+					if (aData.age > 40) {
+						$(nRow).addClass('gradeN');
+					}
+				}
+
 			});
 		});
 
