@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+  
+</head>
+<body ng-app="consultApp">
+
+  <div ui-view name="nav"></div>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <button ui-sref-active="active" id="one" type="button" ui-sref="inbox-page" class="btn btn-info btn-lg">InPatient</button>
+        <button ui-sref-active="active" id="two" type="button" ui-sref="outbox-page" class="btn btn-info btn-lg">OutPatient</button>
+      </div>
+    </div>
+
+    <div ui-view name="content">
+    </div>
+
+  </div>
+
+  <div ui-view name="footer"></div>
+
+</div>
+
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.1/css/jquery.dataTables.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"> -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/1.0.0/css/dataTables.responsive.css"> -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.1/css/select.dataTables.min.css">
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+<!-- <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script> -->
+<!-- <script type="text/javascript" src="https://cdn.datatables.net/responsive/1.0.0/js/dataTables.responsive.js"></script> -->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/select/1.2.1/js/dataTables.select.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+
+<script type="text/javascript" src="dataTables.editor.js"></script>
+<link rel="stylesheet" type="text/css" href="editor.dataTables.css">
+
+<script src="app/scripts/app.js"></script>
+<script src="app/scripts/app.routes.js"></script>
+<script src="app/scripts/controllers/inbox-page.js"></script>
+<script src="app/scripts/controllers/outbox-page.js"></script>
+<script src="app/scripts/controllers/navbar.js"></script>
+<!-- <script src="app/scripts/services/services.js"></script> -->
+</body>
+</html>
